@@ -1,0 +1,32 @@
+textarea {
+    resize: none;
+    width: auto;
+    height: auto;
+    outline: none;
+    white-space: nowrap;
+    display: flex;
+    overflow: hidden;
+    background-color: #2d2f34;
+    font-family: 'Open Sans';
+    color: #ffff;
+}
+  
+#copyBtn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+  
+#copyBtn:hover {
+    background-color: #3e8e41;
+}
+  
+#copyBtn:active {
+    background-color: #3e8e41;
+    transform: translateY(1px);
+}  
