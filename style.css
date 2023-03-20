@@ -1,3 +1,13 @@
+/* Import open sans font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+body {
+    background-color: #2d2f34;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 4px 4px 4px 4px;
+}
 textarea {
     resize: none;
     width: auto;
@@ -9,24 +19,43 @@ textarea {
     background-color: #2d2f34;
     font-family: 'Open Sans';
     color: #ffff;
-}
-  
-#copyBtn {
-    padding: 10px 20px;
     border: none;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
+    user-select: none;
+}
+span {
+    background-color: #ffff;
+    padding: 0.5px 0.5px;
+}
+.wrapper {
+    margin: 4px 0px;
+}
+.wrapper button {
+    float: left;
+    padding: 3px 6px 3px 6px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
     cursor: pointer;
-    border-radius: 5px;
-    margin-left: 10px;
+    background-color: #FAF9F6;
+    color: #353935;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-  
-#copyBtn:hover {
-    background-color: #3e8e41;
+.wrapper button:hover {
+    background-color: #98FB98;
 }
-  
-#copyBtn:active {
-    background-color: #3e8e41;
-    transform: translateY(1px);
-}  
+.wrapper button:active {
+    background-color: #0BDA51;
+    color: #FAF9F6;
+    box-shadow: 1px 1px 1px 1px rgba(250, 249, 246, 0.1);
+}
+.wrapper span {
+    float: right;
+    font-size: 13px;
+    font-weight: 500;
+    color: #FAF9F6;
+    background-color: #0096FF;
+    padding: 2px 7px 2px 7px;
+    border-radius: 10px;
+}

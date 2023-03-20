@@ -1,4 +1,4 @@
-chrome.tabs.query({ currentWindow: true }, tabs => {
+chrome.tabs.query({ currentWindow: true, url: 'https://www.youtube.com/*' }, (tabs) => {
   // Map tabs to URLs
   let urls = tabs.map((tab) => tab.url);
 
@@ -12,13 +12,12 @@ chrome.tabs.query({ currentWindow: true }, tabs => {
   (() => {
     tabUrls.value = urls.join("\n");
     tabUrls.rows = numUrls;
-    tabUrls.cols = Math.max(...urls.map((url) => url.length)) + 2;
+    tabUrls.cols = Math.max(...urls.map((url) => url.length));
   })();
 
   // Copy to clipboard
-  let copyBtn = document.querySelector(".copyBtn");
-  // copyBtn.textContent = "Copy " + numUrls + " URLs";
-  copyBtn.textContent = `Copy ${numUrls} URLs`;
-  copyBtn.addEventListener("click", () => navigator.clipboard.writeText(tabUrls.value));
+  let button = document.querySelector(".button");
+  let text = document.querySelector(".text");
+  text.textContent = numUrls;
+  button.addEventListener("click", () => navigator.clipboard.writeText(tabUrls.value));
 });
-//const element = document.getElementsByClassName("player-ctrl__player-button")[0];
