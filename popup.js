@@ -12,7 +12,7 @@ chrome.tabs.query({ currentWindow: true, url: 'https://www.youtube.com/*' }, (ta
   (() => {
     tabUrls.value = urls.join("\n");
     tabUrls.rows = numUrls;
-    tabUrls.cols = Math.max(...urls.map((url) => url.length));
+    tabUrls.cols = Math.max(...urls.map((url) => url.length) - 4);
   })();
 
   // Copy to clipboard
