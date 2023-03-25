@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     margin: 4px 4px 4px 4px;
 }
-textarea {
+div {
     resize: none;
     width: auto;
     height: auto;
